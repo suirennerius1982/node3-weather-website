@@ -60,16 +60,12 @@ app.get('/weather', (req, res) => {
                 return res.send(error)
             } else {
                 forecast(latitude, longitude, (errorForesCast, weatherObject) => {
-                    const { weather, country, locality, temperature, windChillFactor } = weatherObject
+                    const { weather, country, locality, temperature, windChillFactor, humidity, ultraviolet } = weatherObject
                     if (errorForesCast) {
-                        console.log(errorForesCast)
                         return res.send({
                             error: errorForesCast
                         })
                     } else {
-                         console.log(`Part weather in ${req.query.address} is ${weather}, in country ${country} 
-                                     locality ${locality}. The temperature is: ${temperature} and the 
-                                     windChillFactor ${windChillFactor}`) 
                         res.send(
                             weatherObject
                         )
