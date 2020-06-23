@@ -9,7 +9,6 @@ const geocode = (address, callback) => {
             callback({error: 'Not matching results'}, undefined)
         } else {
             const center = body.features[0].center
-            //console.log(`Place name: ${response.body.features[0].place_name}: Latitude: ${center[1]}, Longitude X: ${center[0]}.`) 
             callback(undefined, {
                 location: body.features[0].place_name,
                 latitude: center[1],

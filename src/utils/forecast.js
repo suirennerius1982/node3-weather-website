@@ -9,7 +9,6 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback(body.error, undefined)  
         } else {
-            console.log(body)
             const currentWeather = body.current
             callback(undefined, {
                     weather: currentWeather.weather_descriptions[0],
