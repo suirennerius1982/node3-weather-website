@@ -21,7 +21,7 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.locality
                 messageTwo.textContent = `Part weather in ${data.locality} is ${data.weather}, in country ${data.country} 
 -                locality ${data.locality}. The temperature is: ${data.temperature} and the 
--                windChillFactor ${data.windChillFactor}. The humidity is ${data.humidity} 
+-                windChillFactor ${data.windChillFactor}. The humidity is ${data.humidity}% 
                  and the ultraviolet incidence is ${data.ultraviolet}.`
             }
         })
